@@ -10,10 +10,19 @@ import {Http} from '@angular/http';
 
 export class AppComponent{
 
+    //atributo
+    fotos: Object[] = [];
+
     constructor(http: Http){
 
+        let stream = http.get('v1/fotos');
+
+        //res => aero function = declaração resumida pra declarar função
+        stream.subscribe(res =>{
+
+            this.fotos = res.json();
+            //console.log(this.fotos);
+        });
         
     }
-
-
 }

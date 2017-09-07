@@ -15,14 +15,17 @@ export class AppComponent{
 
     constructor(http: Http){
 
-        let stream = http.get('v1/fotos');
+        http
+        .get('v1/fotos')
+        /*.map(res => {
+            return res.json();
+        })*/
+        .map(res => res.json())
+        .subscribe(fotos =>{
 
-        //res => aero function = declaração resumida pra declarar função
-        stream.subscribe(res =>{
-
-            this.fotos = res.json();
-            //console.log(this.fotos);
-        });
+            this.fotos = fotos;
+            console.log(this.fotos);
+        },erro => console.log(erro));
         
     }
 }

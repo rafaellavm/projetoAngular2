@@ -10,22 +10,5 @@ import {Http} from '@angular/http';
 
 export class AppComponent{
 
-    //atributo
-    fotos: Object[] = [];
-
-    constructor(http: Http){
-
-        http
-        .get('v1/fotos')
-        /*.map(res => {
-            return res.json();
-        })*/
-        .map(res => res.json())
-        .subscribe(fotos =>{
-
-            this.fotos = fotos;
-            console.log(this.fotos);
-        },erro => console.log(erro));
-        
-    }
+  
 }

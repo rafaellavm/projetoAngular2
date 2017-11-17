@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {FotoComponent} from '../foto/foto.component';
 
 @Component({
     moduleId: module.id,
@@ -8,4 +9,9 @@ import {Component} from '@angular/core';
 
 export class CadastroComponent{
 
+    foto: FotoComponent = new FotoComponent();
+
+    cadastrar(){
+        console.log(this.foto);
+    }
 }

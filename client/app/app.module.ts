@@ -8,6 +8,7 @@ import {PainelModule} from './painel/painel.module';
 import {CadastroComponent} from './cadastro/cadastro.component';
 import {ListagemComponent} from './listagem/listagem.component';
 import {routing} from './app.route';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {routing} from './app.route';
               FotoModule, 
               HttpModule, 
               PainelModule,
+              FormsModule,
               routing],
     declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent] //inicia primeiro

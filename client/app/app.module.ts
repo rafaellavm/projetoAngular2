@@ -8,7 +8,7 @@ import {PainelModule} from './painel/painel.module';
 import {CadastroComponent} from './cadastro/cadastro.component';
 import {ListagemComponent} from './listagem/listagem.component';
 import {routing} from './app.route';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import {FormsModule} from '@angular/forms';
               HttpModule, 
               PainelModule,
               FormsModule,
+              ReactiveFormsModule,
               routing],
     declarations: [AppComponent, CadastroComponent, ListagemComponent],
     bootstrap: [AppComponent] //inicia primeiro
